@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Clínica Odontológica Lima & Soares</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    nav { margin-bottom: 20px; }
+    nav button { margin-right: 8px; padding: 8px; }
+    section { display: none; }
+    section.active { display: block; }
+    .field { margin-bottom: 8px; }
+    .field label { font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Clínica Odontológica Lima & Soares LTDA</h1>
+  <nav>
+    <button onclick="show('info')">Informações</button>
+    <button onclick="show('contato')">Contato</button>
+    <button onclick="show('endereco')">Endereço</button>
+    <button onclick="show('cnae')">Atividades (CNAE)</button>
+    <button onclick="show('socios')">Sócios</button>
+    <button onclick="show('sobre')">Resumo</button>
+  </nav>
+
+  <section id="info">
+    <div class="field"><label>CNPJ:</label>36.290.439/0001‑43</div>
+    <div class="field"><label>Razão Social:</label>Lima & Soares LTDA</div>
+    <div class="field"><label>Nome Fantasia:</label>Clinica Odontologica Lima</div>
+    <div class="field"><label>Data de Abertura:</label>07/02/2020</div>
+    <div class="field"><label>Porte:</label>Micro Empresa</div>
+    <div class="field"><label>Natureza Jurídica:</label>Sociedade Empresária Limitada</div>
+    <div class="field"><label>Optante Simples:</label>Sim (desde 01/01/2024)</div>
+    <div class="field"><label>Capital Social:</label>R$ 20.000,00</div>
+    <div class="field"><label>Situação:</label>Ativa (desde abertura)</div>
+  </section>
+
+  <section id="contato">
+    <div class="field"><label>Telefone:</label>(67) 3453‑3342</div>
+    <div class="field"><label>WhatsApp:</label>(67) 98484‑4194</div>
+    <div class="field"><label>E‑mail:</label>— (não disponível)</div>
+  </section>
+
+  <section id="endereco">
+    <div class="field"><label>Logradouro:</label>Avenida Gabriel de Oliveira, 933</div>
+    <div class="field"><label>Bairro:</label>Centro</div>
+    <div class="field"><label>Cidade/UF:</label>Juti/MS</div>
+    <div class="field"><label>CEP:</label>79955‑000</div>
+  </section>
+
+  <section id="cnae">
+    <div class="field"><label>CNAE Principal:</label>86.30‑5‑04 – Atividade odontológica</div>
+    <p>Consultas e tratamentos odontológicos em clínicas, consultórios, hospitais, empresas e unidades móveis terrestres/fluviais.</p>
+  </section>
+
+  <section id="socios">
+    <div class="field"><label>Sócios:</label></div>
+    <ul>
+      <li>Carlos Alberto de Lima – Sócio</li>
+      <li>Karla de Lima Soares – Sócio‑Administrador</li>
+    </ul>
+  </section>
+
+  <section id="sobre">
+    <p>Fundada em 07/02/2020, a Clínica Odontológica Lima & Soares LTDA é uma microempresa ativa no regime do Simples Nacional desde 01/01/2024, com capital social de R$ 20 000, localizada em Juti/MS. Atua em odontologia geral, com atendimento em consultório e unidades móveis. Sócios: Carlos Alberto de Lima e Karla de Lima Soares.</p>
+  </section>
+
+  <script>
+    function show(id) {
+      document.querySelectorAll('section').forEach(s =>
+        s.classList.toggle('active', s.id === id)
+      );
+    }
+    show('info');
+  </script>
+</body>
+</html>
